@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapchat • Login or Sign up</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script> -->
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="snapchat-container">
+        <div class="form-wrapper">
+            <div class="logo">
+                <img src="https://pngimg.com/d/snapchat_PNG41.png" alt="Snapchat">
+            </div>
+
+            <!-- Login Form -->
+            <form class="form active" id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <button type="submit" class="submit-btn">Log In</button>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="or">OR</span>
+                    <span class="line"></span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="apple-login">
+                        <i class="fab fa-apple"></i> Continue with Apple
+                    </button>
+                    <button type="button" class="google-login">
+                        <i class="fab fa-google"></i> Continue with Google
+                    </button>
+                </div>
+            </form>
+
+            <!-- Signup Form -->
+            <form class="form" id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="signupUsername" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signupEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="or">OR</span>
+                    <span class="line"></span>
+                </div>
+
+                <div class="social-signup">
+                    <button type="button" class="apple-signup">
+                        <i class="fab fa-apple"></i> Sign up with Apple
+                    </button>
+                    <button type="button" class="google-signup">
+                        <i class="fab fa-google"></i> Sign up with Google
+                    </button>
+                </div>
+
+                <p class="terms">
+                    By signing up, you agree to Snapchat's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                </p>
+            </form>
+
+            <div class="switch-form">
+                <p id="loginText" class="active">
+                    Don't have an account? <a href="#" onclick="switchForm('signup')">Sign up</a>
+                </p>
+                <p id="signupText">
+                    Already have an account? <a href="#" onclick="switchForm('login')">Log in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
